@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calendar Monitoring</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calendar-container">
+    <h1>Calendar Monitoring</h1>
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Combined View/Add Event Modal -->
+  <div id="viewModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeViewModal">&times;</span>
+      <h2>Events on <span id="viewDate"></span></h2>
+      <ul id="eventList"></ul>
+
+      <h3>Add New Event</h3>
+      <form id="eventForm">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description"></textarea>
+        </div>
+        <button type="submit" class="btn-save">Save Event</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
